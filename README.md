@@ -4,7 +4,7 @@ This is the api for the spreadly decentralized exchange.
 
 ## Overview
 
-This api serves as the backend of the Spreadly web protocol. Using GraphQL, Redis, Postgres, and IPFS. Spreadly's backend database of events will be populated & stored on IPFS by the spreadly-data repo (See here: <link here>). IPFS will server as a persistant data storage, in the event that the postgres database goes down. IPFS hashes  will also be stored on chain for orders & their associated metadata.  This api will serve the spreadly-frontend (See here: <link here>) & any other users who want to interact with Spreadly programmatically.  
+This api serves as the backend of the Spreadly web protocol. Using GraphQL, Redis, Postgres, and IPFS. Spreadly's backend database of events will be populated & stored on IPFS by the spreadly-data repo (See here: https://github.com/spreadly-dao/spreadly-data). IPFS will server as a persistant data storage, in the event that the postgres database goes down. IPFS hashes  will also be stored on chain for orders & their associated metadata.  This api will serve the spreadly-frontend (See here: https://github.com/spreadly-dao/spreadly-frontend) & any other users who want to interact with Spreadly programmatically.  
 
 ## GraphQL
 
