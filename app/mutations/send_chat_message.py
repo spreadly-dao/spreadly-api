@@ -1,6 +1,8 @@
 import graphene
 from app.subscriptions.on_new_chat_message import OnNewChatMessage
-from app import asgi
+# from app import asgi
+
+chats = []
 
 class SendChatMessage(graphene.Mutation, name="SendChatMessagePayload"):  # type: ignore
     """Send chat message."""
@@ -24,7 +26,7 @@ class SendChatMessage(graphene.Mutation, name="SendChatMessagePayload"):  # type
         )
 
         # Store a message.
-        asgi.chats[chatroom].append({"chatroom": chatroom, "text": text, "sender": username})
+        chats[chatroom].append({"chatroom": chatroom, "text": text, "sender": username})
 
         # Notify subscribers.
         OnNewChatMessage.new_chat_message(chatroom=chatroom, text=text, sender=username)

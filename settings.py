@@ -89,6 +89,7 @@ INSTALLED_APPS: List[str] = [
     "django.contrib.staticfiles",
     "django.contrib.admin",
     "channels",
+    'app'
 ]
 ALLOWED_HOSTS = "*"
 STATIC_URL = "/static/"

@@ -1,7 +1,8 @@
 import graphene
 from app.queries.message import Message
 from app.queries.user import User
-from app import asgi
+# from app import asgi
+from app.mutations.send_chat_message import chats
 
 class Query(graphene.ObjectType):
     """Root GraphQL query."""
@@ -12,7 +13,7 @@ class Query(graphene.ObjectType):
     def resolve_history(self, info, chatroom):
         """Return chat history."""
         del info
-        return asgi.chats[chatroom] if chatroom in asgi.chats else []
+        return chats[chatroom] if chatroom in chats else []
 
     def resolve_user(self, info):
         """Provide currently logged in user."""

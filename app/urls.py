@@ -1,8 +1,8 @@
 from django.urls import path
 from django.contrib.admin import site
-from app.views import graphiql
+from app.views import graphql
 
 urlpatterns = [
-    path("", graphiql),
+    path("", graphql()),
     path("admin", site.urls),
 ]
